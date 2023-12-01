@@ -1,6 +1,6 @@
 # AdventOfCode2023 :christmas_tree:
 
-Repo templated from Axel Lindeberg's AdventOfCode2022 repo.
+Rust directory cribbed from Axel Lindeberg's AdventOfCode2020 repo.
 
 For execution time of each solution, see [timings.md](./timings.md). If and when I get to it!
 

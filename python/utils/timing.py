@@ -16,7 +16,7 @@ def timer(day: int):
             end = perf_counter()
             run_time = end - start
             if value is not None:
-                print(f'Finished Day {day_str(day)} {func.__name__!r} in {run_time:.4f} seconds.')
+                print(f'Finished Day {day_str(day)} {func.__name__!r} in {run_time:.4f} seconds. Answer: {value}')
             return value
         return wrapper_timer
     return timer_decorator

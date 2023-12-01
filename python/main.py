@@ -1,6 +1,6 @@
 import sys
 from days import *
-import days
+
 
 if __name__ == '__main__':
     print("Beginning Python execution...")
@@ -9,7 +9,11 @@ if __name__ == '__main__':
         day = int(sys.argv[1:][0])
         timespan = range(day, day + 1)
     for i in timespan:
-        day_module = globals()[f'day{i:02}']
-        day_module.part_one()
-        day_module.part_two()
-    print('Completed Python execution.')
+        try:
+            day_module = globals()[f'day{i:02}']
+            day_module.part_one()
+            day_module.part_two()
+        except Exception as e:
+            print(f'Error executing day {i:02}: {e}')
+            break
+    print('Python execution ended.')

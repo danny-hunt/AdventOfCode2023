@@ -38,8 +38,8 @@ WORD_OR_NUM_TO_NUM = {
 
 @lru_cache(maxsize=None)
 @timer(1)
-def part_one():
-    input = input_data(1)
+def part_one() -> int:
+    input = input_data(1, str)
     total = 0
     for line in input:
         first_digit = None
@@ -49,15 +49,17 @@ def part_one():
                 if first_digit is None:
                     first_digit = char
                 last_digit = char
+        if first_digit is None or last_digit is None:
+            continue
         total += 10 * int(first_digit) + int(last_digit)
     return total
     
 
 @timer(1)
-def part_two():
+def part_two() -> int:
     # one_result = part_one()
     total = 0
-    for line in input_data(1):
+    for line in input_data(1, str):
         matches = regex.findall(line)
         total += 10 * WORD_OR_NUM_TO_NUM[matches[0]] + WORD_OR_NUM_TO_NUM[matches[-1]]
     return total

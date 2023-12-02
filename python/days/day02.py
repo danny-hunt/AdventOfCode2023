@@ -49,7 +49,7 @@ def is_valid_cube_set(cube_set: CubeSet) -> bool:
 
 @lru_cache(maxsize=None)
 @timer(2)
-def part_one():
+def part_one() -> int:
     games: list[Game] = input_data(2, parser=parser)
     successful_id_total = 0
     for game in games:
@@ -60,7 +60,7 @@ def part_one():
     
 
 @timer(2)
-def part_two():
+def part_two() -> int:
     games: list[Game] = input_data(2, parser=parser)
     total = 0
     for game in games:

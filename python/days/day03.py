@@ -6,12 +6,12 @@ from functools import lru_cache
 @lru_cache(maxsize=None)
 @timer(3)
 def part_one():
-    input = input_data(3)
+    input = input_data(3, str)
     pass
     
 
 @timer(3)
 def part_two():
     one_result = part_one()
-    input = input_data(3)
+    input = input_data(3, str)
     pass

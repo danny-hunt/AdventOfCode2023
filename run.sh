@@ -2,5 +2,5 @@
 export DAY=$1
 
 python3 python/main.py 
-(cd rust; RUST_BACKTRACE=1 cargo run)
+(cd rust; DAY=$1 RUST_BACKTRACE=1 cargo run)
 

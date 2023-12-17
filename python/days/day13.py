@@ -39,7 +39,7 @@ def get_horizontal_line_values(grid: list[str], multiplier: int = 1) -> int:
                 total += potential_matches[-1].value * multiplier
                 potential_matches.pop()
         rows_seen.append(row)
-        print(potential_matches)
+        # print(potential_matches)
     for match in potential_matches:
         total += match.value * multiplier
     return total
@@ -61,7 +61,7 @@ def transpose_grid(grid: list[str]) -> list[str]:
 def part_one() -> int:
     input = input_data(13, parser, sep="\n\n")
     total_total = 0
-    print(transpose_grid(input[0]))
+    # print(transpose_grid(input[0]))
     for grid in input:
         total = 0
         total += get_horizontal_line_values(grid, 100)
